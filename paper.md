@@ -13,16 +13,27 @@ In the social sciences, translation of primary sources can often require the tra
 
 “Parallel corpora are a valuable resource for linguistic research and natural language processing (NLP) applications.” (Christodouloupoulos & Steedman, 2014) One of the most widely translated books in the world is the Bible. From texts written in ancient languages such as Aramaic, Hebrew, and Latin to modern languages including English, Mandarin Chinese, and many others, the Bible provides a significant number of parallel corpora for use in NLP. While the bible consists of roughly 800k words as compared to some other corpora containing 60M words, there are still advantages to utilizing this resource. Namely, the wealth of translations as well as the specific naming and numbering conventions used in the Bible. The latter allows for specific verse by verse comparisons. (Christodouloupoulos & Steedman, 2014)
 
-By utilizing known parallel corpora, specifically ,the Wycliffe translation of the Bible dating from the late fourteenth century, and the Open English Bible the authors will train a neural network to conduct machine translation of Late Middle English Texts to modern English. During the training, the authors will measure the accuracy of translation by investigating common metrics such as NIST, BLEU, WER, and PER. (Popović & Ney, 2011; Turian, et al., 2006) Upon reaching a satisfactory level of accuracy, other Late Middle English documents will be translated and a metric will be used to compare human translated versions with these machine translated texts to look for biases with the investigation starting with the work of Recasens et al. (2013). 
+By utilizing known parallel corpora, specifically ,the Wycliffe translation of the Bible dating from the late fourteenth century, and the Open English Bible the authors will train a neural network to conduct machine translation of Late Middle English Texts to modern English. During the training, the authors will measure the accuracy of translation by investigating common metrics such as NIST, BLEU, WER, and PER. (Popović & Ney, 2011; Turian, et al., 2006) Upon reaching a satisfactory level of accuracy, other Late Middle English documents will be translated and a metric will be used to compare human translated versions with these machine translated texts to look for biases with the investigation starting with the work of Recasens et al. (2013).
 
 # Background - David
 ---
+## Translation
 	1. Neural Network
 	2. Metrics
 	3. Translation
 	4. Machine Translation
 	5. Supervised and Unsupervised Learning
 	6. Parallel Corpora vs. non-Parallel Corpora
+
+Spreading knowledge and work through time and space often requires translating works between languages. Whether these are works of antiquity, such as Homer's works, works from the Renaissance, such as Newton's Principia Mathematica, or contemporary works, in order to share these with people around the world necessitates the translation from their original language to the language of the target audience. While this is non-trivial for modern works that need to be translated into another common modern language, it is feasible to find a translator to transcribe the work into the new language. However, this process is much more difficult, and in some cases impossible, due to the lack of people fluent in some more obscure languages translations can be difficult, and in the case of dead languages can be impossible. In addition to the previous difficulties, human translated works are subject to errors and implicit and explicit biases. This leads to the need for a more reliable manner of translating documents in a manner that is objectively and measurably correct.
+
+This leads to the need for a new manner of translation, namely Machine Translation.
+
+
+
+Generating a machine translation of a work can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate.
+
+
 
 # Research Background - David
 ---
@@ -42,7 +53,7 @@ By utilizing known parallel corpora, specifically ,the Wycliffe translation of t
 		b. Failed to translate meaningfully
 		c. Semi-successful algorithm
 			I. Corpora size
-			
+
 # Future Work - John
 ---
 	1. Expand to larger corpora
