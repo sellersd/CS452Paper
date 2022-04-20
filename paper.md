@@ -38,7 +38,7 @@ The sequences involved in the sequence-to-sequence encoder are from parallel cor
 
 Machine learning can utilize either supervised or unsupervised learning. With supervised learning, the model is trained on labeled data so that each piece of data has a corresponding label identifying what the model should generate for that piece of data. While this would be a relatively simple manner to generate a translation using a dictionary, it fails to take into account the nuances of the languages and the fact that the grammar rules differ between languages.
 
-With unsupervised learning, the model is trained without clearly labeled data and attempts to learn to identify data by detecting patterns in the training data. 
+With unsupervised learning, the model is trained without clearly labeled data and attempts to learn to identify data by detecting patterns in the training data.
 
 Generating a machine translation of a work can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate.
 
@@ -53,6 +53,11 @@ Generating a machine translation of a work can result in a translated work that 
 		a. Learning curve
 	2. Description of project
 		a. scope
+		b. Training data
+			I. Consisted of the four gospels 
+			II. 3779 paired lines
+			III. Wycliffe 83139 words
+			IV. OEV 84264 words
 	3. Agile methodology
 
 # Implementation - John
