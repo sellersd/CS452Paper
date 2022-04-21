@@ -68,12 +68,12 @@ Generating a machine translation of a work can result in a translated work that 
 		c. Semi-successful algorithm
 			I. Corpora size
 
-# Future Work - John
+# Future Work
 ---
-	1. Expand to larger corpora
-	2. Test different metrics
-	3. Bias analysis in human translations
-	4. GPU utilization
+	1. Corpus size - Though the Bible is a very convenient parallel data set due to having numbered and aligned verses and being widely translated,  it is quite small in size for a parallel corpus. The Bible is approximately 800 thousand words in size whereas a common modern parallel corpus such as the Europarl corpus has an average of 60 million words per language.  (Christodouloupoulos & Steedman, 2014)
+	2. Test different metrics - The BLEU score of the implemented machine translation was derived. Future efforts could gain more insight into the quality of the translation by using other metrics such as NIST, WER, and PER.
+	3. Bias analysis in human translations - The overall aim of the project was to compare our Bible trained model's translation of other Middle English works to their humanly translated versions and scan for bias in the human translation in comparison to the machine translation. A sufficiently trained model was not developed in time for work on bias detection to proceed. Future researchers can begin their work with the model developed in this work trained on larger corpora and examine its translations for bias.
+	4. GPU utilization - The computational time per epoch was approximately 25 Seconds on an AMD 2700x processor for a 80k word sample of the Bible.  Future efforts with larger corpora may need to set up GPU utilization options from the TensorFlow library to keep computational time per epoch manageable.
 
 # Summary
 ---
