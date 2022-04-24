@@ -62,11 +62,6 @@ Traditionally, works were translated between languages by human translators. As 
 
 # Implementation - John
 ---
-	1. Three algorithms
-		a. Versioning between Python and TensorFlow
-		b. Failed to translate meaningfully
-		c. Semi-successful algorithm
-			I. Corpora size
 
 Explored multiple translation models and attempted to adapt them to Late Middle English to Modern English translations.
 
