@@ -27,20 +27,17 @@ By utilizing known parallel corpora, specifically ,the Wycliffe translation of t
 
 Spreading knowledge and work through time and space often requires translating works between languages. Whether these are works of antiquity, such as Homer's works, works from the Renaissance, such as Newton's Principia Mathematica, or contemporary works, in order to share these with people around the world necessitates the translation from their original language to the language of the target audience. While this is non-trivial for modern works that need to be translated into another common modern language, it is feasible to find a translator to transcribe the work into the new language. However, this process is much more difficult, and in some cases impossible, due to the lack of people fluent in some more obscure languages translations can be difficult, and in the case of dead languages can be impossible. In addition to the previous difficulties, human translated works are subject to errors and implicit and explicit biases. This leads to the need for a more reliable manner of translating documents in a manner that is objectively and measurably correct.
 
-This leads to the need for a new manner of translation, namely Machine Translation. The algorithms of interest in this project are based upon neural networks.
+This leads to the need for a new manner of translation, namely Machine Translation. The algorithms of interest in this project are based upon neural networks. Neural networks are meant to mimic the structure of neurons in the brain and the connections between them. The particular model used for this project is a recurrent neural network based on a sequence-to-sequence transformer provided by the Keras Python Library.
 
-![image][Images/s2s_encoder.png "Sequence to Sequence Encoder"]
-<img src="../Images/s2s_encoder.png"/>
-
-Sequence-to-sequence encoder
-
-The sequences involved in the sequence-to-sequence encoder are from parallel corpora, which are two bodies of work, one written in the source language the other written in the target language. The RNN attempts to translate from the target language to the source language.
+The sequences involved in the sequence-to-sequence encoder are from parallel corpora, which are two bodies of work, one written in the source language the other written in the target language. The RNN attempts to translate from the target language to the source language. These models work on sequences of data as opposed to individual pieces of data and attempt to make predictions of the next word in the sequence based off of statistical inferences learned during the training phase.
 
 Machine learning can utilize either supervised or unsupervised learning. With supervised learning, the model is trained on labeled data so that each piece of data has a corresponding label identifying what the model should generate for that piece of data. While this would be a relatively simple manner to generate a translation using a dictionary, it fails to take into account the nuances of the languages and the fact that the grammar rules differ between languages.
 
-With unsupervised learning, the model is trained without clearly labeled data and attempts to learn to identify data by detecting patterns in the training data.
+With unsupervised learning, the model is trained without clearly labeled data and attempts to learn to identify data by detecting patterns in the training data. This is not to say that the training data does not provide the model with information regarding its correctness, but it does so in a less straightforward manner.
 
-Generating a machine translation of a work can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate.
+For this project, the model will be trained on two translations of the Bible, the Wycliffe Bible and the American Standard Version. These two versions were chosen based on the fact that these are both accepted as accurate translations of the Bible, both are available in the public domain, and they represent a parallel corpora that lends itself to training a MT model. In some models, the training set consists of short phrases that function in much the way a bilingual dictionary works. The goal and target phrases are fed into the model and the model learns to understand the relationship between these phrases. This project differs in that by using parallel corpora, larger sequences of text are used to train the model. Each pair of training data consists of a target verse and the corresponding goal verse. The model compared these verse to learn the proper translations, and from this training learned to make predictions.
+
+Generating a machine translation of a work in this manner can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate. There needs to be an objective measure for the accuracy of a translated work. Traditionally, this occurred by having a human manually review the document for correctness. However, the standard is now to use the Bilingual Evaluation Understudy (BLEU) metric for determining accuracy. 
 
 https://commons.wikimedia.org/wiki/File:Neural_Network_Dropout.svg
 
@@ -65,7 +62,7 @@ The research component consisted of developing a fundamental knowledge of natura
 
 After developing these requisite skills, the researchers attempted to develop a model to translate between Late Middle English texts, circa 1390 AD, to Modern English. The researchers were required to complete this project in a single semester course as a part of their Senior Capstone project. In order to obtain credit for this project, students were to deliver a statement of work, a machine translation model, and a paper detailing their experience in a collaborative faculty-student research project.
 
-The goal of the project team was to utilize the Wycliffe Bible from 1384 AD as the source material and the Open English Version of the Bible as the target language. For development purposes, four New Testament books were used, namely Matthew, Mark, Luke, and John were used as the parallel corpora. The authors parsed this text, removed unwanted characters, chapter and verse headings, and paired data on a verse by verse basis in order to create the training data. Upon completion of the training data set, the model was trained for 30 epochs to develop a translation model. This resulted in translations such as 
+The goal of the project team was to utilize the Wycliffe Bible from 1384 AD as the source material and the Open English Version of the Bible as the target language. For development purposes, four New Testament books were used, namely Matthew, Mark, Luke, and John were used as the parallel corpora. The authors parsed this text, removed unwanted characters, chapter and verse headings, and paired data on a verse by verse basis in order to create the training data. Upon completion of the training data set, the model was trained for 30 epochs to develop a translation model. This resulted in translations such as
 
 
 	2. Description of project
@@ -109,5 +106,5 @@ The overall aim of the project was to compare our Bible trained model's translat
 
 The computational time per epoch was approximately 25 Seconds on an AMD 2700x processor for a 80k word sample of the Bible.  Future efforts with larger corpora may need to set up GPU utilization options from the TensorFlow library to keep computational time per epoch manageable.
 
-# Summary
+# Summary - Split
 ---
