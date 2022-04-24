@@ -63,7 +63,7 @@ Traditionally, works were translated between languages by human translators. As 
 # Implementation - John
 ---
 
-Explored multiple translation models and attempted to adapt them to Late Middle English to Modern English translations.
+The authors explored multiple translation models and attempted to adapt them to Late Middle English to Modern English translations.
 
 The first explored model was a French to English model that the authors could not make function due to versioning errors between Python and the Tensorflow library.
 
