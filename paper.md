@@ -17,13 +17,6 @@ By utilizing known parallel corpora, specifically ,the Wycliffe translation of t
 
 # Background - David
 ---
-## Translation
-	1. Neural Network
-	2. Metrics
-	3. Translation
-	4. Machine Translation
-	5. Supervised and Unsupervised Learning
-	6. Parallel Corpora vs. non-Parallel Corpora
 
 Spreading knowledge and work through time and space often requires translating works between languages. Whether these are works of antiquity, such as Homer's works, works from the Renaissance, such as Newton's Principia Mathematica, or contemporary works, in order to share these with people around the world necessitates the translation from their original language to the language of the target audience. While this is non-trivial for modern works that need to be translated into another common modern language, it is feasible to find a translator to transcribe the work into the new language. However, this process is much more difficult, and in some cases impossible, due to the lack of people fluent in some more obscure languages translations can be difficult, and in the case of dead languages can be impossible. In addition to the previous difficulties, human translated works are subject to errors and implicit and explicit biases. This leads to the need for a more reliable manner of translating documents in a manner that is objectively and measurably correct.
 
@@ -37,7 +30,7 @@ With unsupervised learning, the model is trained without clearly labeled data an
 
 For this project, the model will be trained on two translations of the Bible, the Wycliffe Bible and the American Standard Version. These two versions were chosen based on the fact that these are both accepted as accurate translations of the Bible, both are available in the public domain, and they represent a parallel corpora that lends itself to training a MT model. In some models, the training set consists of short phrases that function in much the way a bilingual dictionary works. The goal and target phrases are fed into the model and the model learns to understand the relationship between these phrases. This project differs in that by using parallel corpora, larger sequences of text are used to train the model. Each pair of training data consists of a target verse and the corresponding goal verse. The model compared these verse to learn the proper translations, and from this training learned to make predictions.
 
-Generating a machine translation of a work in this manner can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate. There needs to be an objective measure for the accuracy of a translated work. Traditionally, this occurred by having a human manually review the document for correctness. However, the standard is now to use the Bilingual Evaluation Understudy (BLEU) metric for determining accuracy. 
+Generating a machine translation of a work in this manner can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate. There needs to be an objective measure for the accuracy of a translated work. Traditionally, this occurred by having a human manually review the document for correctness. However, the standard is now to use the Bilingual Evaluation Understudy (BLEU) metric for determining accuracy.
 
 https://commons.wikimedia.org/wiki/File:Neural_Network_Dropout.svg
 
