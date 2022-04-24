@@ -79,19 +79,35 @@ The goal of the project team was to utilize the Wycliffe Bible from 1384 AD as t
 
 # Implementation - John
 ---
-	1. Three algorithms
-		a. Versioning between Python and TensorFlow
-		b. Failed to translate meaningfully
-		c. Semi-successful algorithm
-			I. Corpora size
-		c. Jupyter notebook
 
-# Future Work - John
+
+The authors explored multiple translation models and attempted to adapt them to Late Middle English to Modern English translations.
+
+The first explored model was a French to English model that the authors could not make function due to versioning errors between Python and the Tensorflow library.
+
+The second model was a German to English model that would function, but would not output meaningful translations. The resulting translations were as such "and the the the the the the the" etc.
+
+The third model was a Spanish to English model obtained from the keras-io repository under the Apache license. This model was succesfully adapted to a Late Middle English to Modern English sequence to sequence transformer. Changes to the input size were needed as the goal was to input whole Bible verses as a sequnce and the existing model was tailored for short 2-4 word sequences,  whereas the Bible's longest verse is 80 words long. The BLEU score metric was added to the resultant translation from the model, but would not output meanignful scores.'
+
+The keras algorithm was trained on a paralel corpora comprised of the books Mathew, Mark, Luke, and John of the Bible for a total of 30 epochs. These four books of the Bible are approximately 80 thousand words long comprising approximately 1/10 of the total Bible. The third model would output translations with a given source sequence and goal sequence such as the below example.
+
+Source  “And whanne thei founden hym not, thei turneden ayen in to Jerusalem, and souyten hym.”.
+
+Goal    [start] and when they found him not, they returned to Jerusalem, seeking for him. [end].
+
+Translation     [start] and when they found him they found the way into the country and they would have put away [end] BLEU Score: [2-gram, 3-gram, 4-gram] [0, 0, 0].
+
+
+
+# Future Work
 ---
-	1. Expand to larger corpora
-	2. Test different metrics
-	3. Bias analysis in human translations
-	4. GPU utilization
+Though the Bible is a very convenient parallel data set due to having numbered and aligned verses and being widely translated,  it is quite small in size for a parallel corpus. The Bible is approximately 800 thousand words in size whereas a common modern parallel corpus such as the Europarl corpus has an average of 60 million words per language.  (Christodouloupoulos & Steedman, 2014)
+
+The BLEU score of the implemented machine translation was derived. Future efforts could gain more insight into the quality of the translation by using other metrics such as NIST, WER, and PER.
+
+The overall aim of the project was to compare our Bible trained model's translation of other Middle English works to their humanly translated versions and scan for bias in the human translation in comparison to the machine translation. A sufficiently trained model was not developed in time for work on bias detection to proceed. Future researchers can begin their work with the model developed in this work trained on larger corpora and examine its translations for bias.
+
+The computational time per epoch was approximately 25 Seconds on an AMD 2700x processor for a 80k word sample of the Bible.  Future efforts with larger corpora may need to set up GPU utilization options from the TensorFlow library to keep computational time per epoch manageable.
 
 # Summary
 ---
