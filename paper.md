@@ -68,6 +68,12 @@ Traditionally, works were translated between languages by human translators. As 
 		c. Semi-successful algorithm
 			I. Corpora size
 
+	Explored multiple translation models and attempted to adapt them to Late Middle English to Modern English translations.
+	The first explored model was a French to English model that the authors could not make function due to versioning errors between Python and the Tensorflow library.
+	The second model was a German to English model that would function, but would not output meaningful translations. The resulting translations were like such "and the the the the the the the etc"
+	The third model was a Spanish to English model obtained from the Keras-io repository under the Apache license. This model was succesfully adapted to a Late Middle English to Modern English sequence to sequence transformer. Changes to the input size were needed as the goal was to input whole Bible verses as a sequnce and the existing model was tailored for short 2-4 word sequences,  whereas the Bible's longest verse is 80 words long. The BLEU score metric was added to the resultant translation from the model, but would not output meanignful scores.'
+
+
 # Future Work
 ---
 Though the Bible is a very convenient parallel data set due to having numbered and aligned verses and being widely translated,  it is quite small in size for a parallel corpus. The Bible is approximately 800 thousand words in size whereas a common modern parallel corpus such as the Europarl corpus has an average of 60 million words per language.  (Christodouloupoulos & Steedman, 2014)
