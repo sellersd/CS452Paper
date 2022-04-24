@@ -42,11 +42,11 @@ With unsupervised learning, the model is trained without clearly labeled data an
 
 Generating a machine translation of a work can result in a translated work that is free from the inherent inaccuracies present in human translated works, but it cannot be assumed that translation is suitably accurate.
 
-
+https://commons.wikimedia.org/wiki/File:Neural_Network_Dropout.svg
 
 # Research Background - David
 ---
-	1. Selected works review
+Traditionally, works were translated between languages by human translators. As computing technology evolved, interest began to develop in utilizing machines to perform these translations. In the 1960's, the attempts to translate using the computers of the day were based off of complex rule sets developed by engineers to follow the manual translation.  Due to the variability in the use of natural languages this approach failed to be effective and a new approach was needed. With the increased processing power of computers decreased, a move was made to automate the development of the rule set for translating natural language texts.  (Deep Learning Book) Developing this ruleset is key to developing the machine translation (MT) model. In order to develop the ruleset training data must be used to relate the source and target languages. According to Christodouloupoulos & Steedman, the Bible is a particularly useful corpus due to its wide availability and reliable translations into many languages. (2014) These translations create parallel corpora that allow the model to be trained on human translated works in order to emulate these known good translations.
 
 # The Capstone Project - Split
 	1. Description of team
@@ -54,7 +54,7 @@ Generating a machine translation of a work can result in a translated work that 
 	2. Description of project
 		a. scope
 		b. Training data
-			I. Consisted of the four gospels 
+			I. Consisted of the four gospels
 			II. 3779 paired lines
 			III. Wycliffe 83139 words
 			IV. OEV 84264 words
