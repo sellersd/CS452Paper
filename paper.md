@@ -51,6 +51,23 @@ Traditionally, works were translated between languages by human translators. As 
 # The Capstone Project - Split
 	1. Description of team
 		a. Learning curve
+
+The team consisted of two senior undergraduate Computer Science students at Athens State University. The academic goal of this project was to allow for the project team members to learn the research process in academia and gain insight into the application of the theory developed in the classroom to contribute to the body of knowledge of the computer science community. Selection to this project was based on a student interest survey, where students were able to list preferences for assignment between research and applied problems. Neither of the participants in this project had a meaningful level of experience with machine learning and this project was selected by the students to expand their knowledge of deep learning and machine translation. This resulted in a steep learning curve for the participants and a significant amount of the research time was spent on acquiring a fundamental level of knowledge on deep learning and machine translation.
+
+The research component consisted of developing a fundamental knowledge of natural language processing (NLP) and machine translation. Milestones consisted of
+	+ Parsing Text
+	+ Supervised vs. Unsupervised Learning
+	+ Experience with Different Models
+	+ Implementing Models
+	+ Knowledge of Different Metrics for Accuracy
+  + Paired Programming
+	+ Utilization of Version Control Systems.
+
+After developing these requisite skills, the researchers attempted to develop a model to translate between Late Middle English texts, circa 1390 AD, to Modern English. The researchers were required to complete this project in a single semester course as a part of their Senior Capstone project. In order to obtain credit for this project, students were to deliver a statement of work, a machine translation model, and a paper detailing their experience in a collaborative faculty-student research project.
+
+The goal of the project team was to utilize the Wycliffe Bible from 1384 AD as the source material and the Open English Version of the Bible as the target language. For development purposes, four New Testament books were used, namely Matthew, Mark, Luke, and John were used as the parallel corpora. The authors parsed this text, removed unwanted characters, chapter and verse headings, and paired data on a verse by verse basis in order to create the training data. Upon completion of the training data set, the model was trained for 30 epochs to develop a translation model. This resulted in translations such as 
+
+
 	2. Description of project
 		a. scope
 		b. Training data
@@ -62,6 +79,7 @@ Traditionally, works were translated between languages by human translators. As 
 
 # Implementation - John
 ---
+
 
 The authors explored multiple translation models and attempted to adapt them to Late Middle English to Modern English translations.
 
