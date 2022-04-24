@@ -76,6 +76,15 @@ The second model was a German to English model that would function, but would no
 
 The third model was a Spanish to English model obtained from the keras-io repository under the Apache license. This model was succesfully adapted to a Late Middle English to Modern English sequence to sequence transformer. Changes to the input size were needed as the goal was to input whole Bible verses as a sequnce and the existing model was tailored for short 2-4 word sequences,  whereas the Bible's longest verse is 80 words long. The BLEU score metric was added to the resultant translation from the model, but would not output meanignful scores.'
 
+The keras algorithm was trained on a paralel corpora comprised of the books Mathew, Mark, Luke, and John of the Bible for a total of 30 epochs. These four books of the Bible are approximately 80 thousand words long comprising approximately 1/10 of the total Bible. The third model would output translations with a given source sequence and goal sequence such as the below example.
+
+Source  “And whanne thei founden hym not, thei turneden ayen in to Jerusalem, and souyten hym.”.
+
+Goal    [start] and when they found him not, they returned to Jerusalem, seeking for him. [end].
+
+Translation     [start] and when they found him they found the way into the country and they would have put away [end] BLEU Score: [2-gram, 3-gram, 4-gram] [0, 0, 0].
+
+
 
 # Future Work
 ---
